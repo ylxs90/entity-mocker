@@ -1,0 +1,7 @@
+spring:
+  resources:
+    static-locations: classpath:config.properties
+server:
+  port: 8080
+  servlet:
+    context-path: /mocker
