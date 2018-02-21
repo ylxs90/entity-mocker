@@ -3,8 +3,9 @@ package io.hxiao.mocker.spi;
 @FunctionalInterface
 public interface Adapter<P, R> {
 
-    static Adapter defaultAdapter() {
-        return a -> a;
+    @SuppressWarnings("unchecked")
+    static <P, R> Adapter<P, R> defaultAdapter() {
+        return a -> (R) a;
     }
 
     R adapt(P param);

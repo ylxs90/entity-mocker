@@ -1,14 +1,17 @@
 package io.hxiao.mocker.controller;
 
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/")
+@RequestMapping(value = "/", produces = MediaType.APPLICATION_JSON_VALUE)
 public class MockerController {
 
     @RequestMapping("/")
     public String index() {
+
+
         return "hello";
     }
 
